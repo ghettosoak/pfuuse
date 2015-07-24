@@ -1,0 +1,155 @@
+<!doctype html>
+<!--[if lte IE 8]>     <html class="ie ie8" lang="en"> <![endif]-->
+<!--[if IE]>       <html class="ie" lang="en"> <![endif]-->
+<!--[if !IE]><!--> <html class="not_ie" lang="en"> <!--<![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Pfuuse</title>
+
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <meta name="viewport" content="user-scalable=no, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css?=v1.0.19" />
+</head>
+
+<body data-location="hello" class="">
+
+	<div class="main">
+		
+		<div class="carousel">
+
+			<div class="hello">
+				<div class="hello_interior">
+					<span class="logo gfx-logo"></span>
+					<h1>pfuuse</h1>
+					<p><b>Pfuuse</b> is probably the dreamiest way to consume your cranial bettmümpfeli.</p>
+					<div class="hello_buttons hello_go">Let's go!</div>
+					<div class="hello_buttons hello_about about_opener">What the fu...?</div>
+				</div>
+			</div>
+
+			<div class="browser">
+				<div class="browser_interior"></div>
+				<div class="gather"><span>Let's read!</span></div>
+			</div>
+
+			<div class="viewer">
+				<div class="viewer_header">
+					<div class="interior">
+							
+						<div class="viewer_header_title"></div>
+						<div id="viewer_header_progress"></div>
+					</div>
+				</div>
+
+				<div class="viewer_save_confirm">
+					<div>message sent!</div>
+				</div>
+
+				<div class="viewer_list_progress">
+					<span></span>
+				</div>
+				
+				<div id="viewer_list">
+					<div class="viewer_list_visible"></div>
+					<div class="viewer_list_clone"></div>
+				</div>
+
+				<div class="viewer_list_opener_desktop">
+					<span class="gfx-menu"></span>
+				</div>
+
+				<div class="viewer_view">
+					<div class="viewer_view_interior"></div>
+					<div class="viewer_view_finish">
+						<div class="viewer_view_finish_interior">
+							<h3>That's it!</h3>
+							<p class="finish_send">Tap here to send off your saved stories.</p>
+							<p class="finish_sleep">Pfuus guet :)</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="viewer_ctrl">
+					<div class="ctrl menu"><span></span></div>
+					<a class="ctrl full" target="_blank"><span></span></a>
+					<div class="ctrl prev"><span></span></div>
+					<div class="ctrl next"><span></span></div>
+					<div class="ctrl save"><span></span></div>
+				</div>
+
+				<div class="viewer_save_select">
+					<div class="viewer_save_select_exterior">
+						<div class="viewer_save_select_interior">
+							<div class="viewer_save_select_option" data-option="Check this out!"></div>
+							<div class="viewer_save_select_option" data-option="Mobile-unfriendly!"></div>
+							<div class="viewer_save_select_command" data-command="send">send me what I've got!</div>
+							<div class="viewer_save_select_command" data-command="exit">ah, nevermind</div>
+						</div>
+					</div>
+				</div>				
+			</div>
+		</div>
+
+		<div class="loader">
+			<div class="loader_slide">
+				<div class="loader_interior">
+					<div class="loader_loading">
+						<span class="gfx-box_1"></span>
+						<span class="gfx-box_2"></span>
+						<span class="gfx-box_3"></span>
+						<span class="gfx-logotype"></span>
+					</div>
+					<p>just a minute...</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="about">
+			<div class="about_slide">
+				<div class="interior">
+					<span class="logo gfx-logo"></span>
+					<p><b>Pfuuse</b> (pronounced pf-oo-sah) is a more thoughtful way to consume your favorite outlets of news. </p>
+					<p>I do most of my news browsing on my phone before I go to bed, and I’ve found the back and forth between articles and aggregators tiresome. Not to mention that Hacker News is entirely mobile-unfriendly – along with all too many hacker blogs – and I saw room for improvement. </p>
+					<p>Pfuuse aims to let you fill your head with the happenings of the world around you, as linearly and elegantly as possible, all the while trying to remain unobtrusive.</p>
+					<p>The UI is set in Christian Robertson's <a href="https://github.com/google/roboto" target="_blank">Roboto</a>, titles are set in <a href="http://www.impallari.com/projects/overview/libre-baskerville" target="_blank">Libre Baskerville</a> by Impallari Type, and copy is set in Georg Duffner's <a href="http://www.georgduffner.at/ebgaramond/" target="_blank">EB Garamond</a>.</p>
+					<p>It uses the <a href="https://github.com/HackerNews/API" target="_blank">Hacker News API</a>, the <a href="" target="_blank">Designer News API</a>, and scrapes the home page of <a href="http://stackexchange.com/" target="_blank">Stack Exchange</a> for its top stories. It pipes articles through the <a href="https://www.readability.com/developers/api" target="_blank">Readability API</a> for maximum freshness. </p>
+					<p>On the backend, it leverages <a href="https://nodejs.org/" target="_blank">Node.js</a>: it uses <a href="https://github.com/request/request" target="_blank">Request</a> to make calls to sites, <a href="https://github.com/cheeriojs/cheerio" target="_blank">Cheerio</a> to parse pages, <a href="https://github.com/expressjs/body-parser" target="_blank">Bodyparser</a> to handle JSON AJAX calls, <a href="https://github.com/expressjs/cors" target="_blank">CORS</a> to remove headaches, and <a href="https://github.com/andris9/Nodemailer" target="_blank">NodeMailer</a> to send emails.</p>
+					<p>On the frontend, it uses <a href="http://handlebarsjs.com/" target="_blank">Handlebars.js</a> for templating, <a href="https://jqueryui.com/" target="_blank">jQueryUI</a> to help with the menu, <a href="http://touchpunch.furf.com/" target="_blank">jQuery Touchpunch</a> to become mobile friendly, and <a href="https://jquery.com/" target="_blank">jQuery</a> to wire up the rest.</p>
+					<p>It does not attempt or intend to infringe on the copyrights of anyones work. If you have any issues with how Pfuuse treats the work of others, please let me know <a href="mailto: e@ject.ch">here.</a></p>
+					<p>It is still very much in beta.</p>
+					<p>‘Pfuuse’ means to sleep in Swiss German; ‘pfuus guet’ means sleep well.</p>
+					<p>Copyright 2015 Mike Fischer.</p>				
+				</div>
+			</div>
+			<div class="about_close gfx-delete"></div>
+		</div>
+
+		<div class="homescreener">
+			<div class="homescreener_slide">
+				<div class="interior">
+					<h2>Hey!</h2>
+					<p><b>Pfuuse</b> was meant to be used in iOS's web app mode – why not try it there?</p>
+					<p>It's super simple to get there: tap on the 'share' button in the bottom bar: </p>
+					<img data-src="assets/img/ios_menu_1.jpg">
+					<p>Then tap on the 'Add to Home Screen' button: </p>
+					<img data-src="assets/img/ios_menu_2.jpg">
+					<p>and follow the instructions there.</p>
+					<p>See you soon! :)</p>
+				</div>
+			</div>
+			<div class="homescreener_close">No thanks, I'd like to stay here</div>
+		</div>
+
+	</div>
+
+<script type="text/javascript" src="assets/js/main.js"></script>
+
+</body>
+
+</html>

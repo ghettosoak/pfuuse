@@ -1,0 +1,105 @@
+.loader{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0);
+	visibility: hidden;
+	opacity: 0;
+	.transform(translateY(-100%));
+
+	.transition &{
+		.transition(all .5s ease);
+	}
+
+	.loading &{
+		background-color: rgba(0, 0, 0, 1);
+		visibility: visible;
+		opacity: 1;
+		.transform(translateY(0));
+	}
+
+	.loader_slide{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top: 0;
+		display: table;
+		background-image: url(../img/range.jpg);
+		background-size: cover;
+		background-position: center center;
+		.transform(translateY(100%));
+
+		.transition &{
+			.transition(all .5s ease);
+		}
+
+		.loading &{
+			.transform(translateY(0));
+		}
+
+		.loader_interior{
+			display: table-cell;
+			vertical-align: middle;
+			color: @color-copy-contrast;
+			text-align: center;
+
+			.loader_loading{
+				height: 65px;
+				position: relative;
+				display: none;
+
+				.transition &{
+					display: block;
+				}
+
+				span{
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					font-size: 100px;
+					.transform(rotate(0deg));
+
+					&:before{
+						margin: 0;
+					}
+				}
+
+				.loading & .gfx-box_1{ animation: clockwise 2s infinite; }
+				.loading & .gfx-box_2{ animation: anticlockwise 4s infinite; }
+				.loading & .gfx-box_3{ animation: clockwise 6s infinite; }
+			}
+		}
+	}
+}
+
+@keyframes clockwise {
+	0% {
+		.transform(rotate(0deg));
+	}
+	100% {
+		.transform(rotate(360deg));
+	}
+}
+
+@keyframes anticlockwise {
+	0% {
+		.transform(rotate(360deg));
+	}
+	100% {
+		.transform(rotate(0deg));
+	}
+}
+
+
+
+
+
+
+
+
+

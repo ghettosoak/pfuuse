@@ -1,0 +1,47 @@
+.hello{
+	left: 0;
+	background-image: url(../img/forest.jpg);
+	background-size: cover;
+	background-position: center center;
+	display: table;
+
+	.hello_interior{
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		color: @color-copy-contrast;
+		font-family: @ui_regular;
+		background-color: rgba(0, 0, 0, .35);
+
+		.logo{
+			font-size: 100px;
+
+			&:before{
+				margin: 0;
+			}
+		}
+
+		h1, b{
+			font-family: @headline_bold;
+		}
+
+		.hello_buttons{
+			width: 70%;
+			position: relative;
+			padding: 15px 0;
+			margin: 10px auto 0;
+			background-color: @color-background;
+			color: @color-copy;
+			cursor: pointer;
+
+			@media @large{
+				width: @button_width;
+				margin-top: 25px;
+			}
+		}
+
+		.hello_go{
+			font-family: @ui_bold;
+		}
+	}
+}

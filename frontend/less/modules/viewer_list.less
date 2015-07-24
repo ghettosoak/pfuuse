@@ -1,0 +1,85 @@
+#viewer_list{
+	position: absolute;
+	width: 100%;
+	height: ~'calc(100% - 50px)';
+	top: 0px;
+	left: -100%;
+	z-index: 1;
+	background-color: @color-background-dark;
+	border-bottom: 1px @color-background solid;
+	color: white;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	// backface-visibility: hidden;
+
+	.transition &{
+		.transition(all .5s @eio);
+	}
+
+	@media @large{
+		width: @list_width_desktop;
+		left: -@list_width_desktop;
+		top: 25px;
+		height: ~'calc(100% - 20px)';
+	}
+
+	.list &{
+		left: 0;
+	}
+
+	.viewer_list_visible {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		padding-right: 7px;
+	}
+}
+
+.viewer_list_opener_desktop{
+	display: none;
+
+	@media @large{
+		display: block;
+		position: absolute;
+		top: 25px;
+		left: 0;
+		width: 50px;
+		z-index: 1;
+		height: ~'calc(100% - 25px)';
+		background-color: @color-background-dark;
+		color: @color-copy-contrast;
+		cursor: pointer;
+
+		.transition &{
+			.transition(all .5s @eio);
+		}
+
+		.list &{
+			left: @list_width_desktop;
+		}
+	}
+
+	span{
+		position: absolute;
+		height: 40px;
+		width: 40px;
+		top: 50%;
+		left: 50%;
+		margin: -20px 0 0 -20px;
+		font-size: 40px;
+		line-height: 40px;
+	}
+}
+
+
+
+
+
+
+
+
+

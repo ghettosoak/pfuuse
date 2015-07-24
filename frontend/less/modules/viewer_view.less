@@ -1,0 +1,81 @@
+.viewer_view{
+	position: absolute;
+	width: 100%;
+	height: ~'calc(100% - 75px)';
+	top: 25px;
+	left: 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+
+	@media @large{
+		height: ~'calc(100% - 25px)';
+		width: ~'calc(100% - 50px)';
+		left: 50px;
+
+		.transition &{
+			.transition(all .5s @eio);
+		}
+
+		.list &{
+			left: @list_width_desktop + 50px;
+			width: ~'calc(100% - @{list_width_desktop} - 50px)'
+		}
+	}
+
+	.viewer_view_interior{
+		position: relative;
+		overflow: hidden;
+	}
+
+	.viewer_view_finish{
+		position: relative;		
+		width: 100%;
+		height: 200px;
+		text-align: center;
+		font-family: @ui_regular;
+		color: @color-copy-contrast;
+		background: linear-gradient(135deg, #61BDCD, #D9AA6C);
+		box-shadow: inset 0px 0px 0px 10px @color-background;
+		display: table;
+
+		.to_send &{
+			cursor: pointer;
+		}
+
+		.viewer_view_finish_interior{
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		h3{
+			margin-top: 0;
+			font-family: @ui_bold;
+		}
+
+		p{
+			visibility: hidden;
+			opacity: 0;
+
+			.transition &{
+				.transition(all .5s @eio);
+			}
+		}
+
+		.finish_send{
+			.to_send &{
+				visibility: visible;
+				opacity: 1; 
+			}
+		}
+
+		.finish_sleep{
+			visibility: visible;
+			opacity: 1; 
+			.to_send &{
+				visibility: hidden;
+				opacity: 0; 
+			}
+		}
+	}
+}

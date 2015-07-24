@@ -1,0 +1,71 @@
+.viewer_ctrl{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 50px;
+	width: 100%;
+	background-color: @color-background-dark;
+
+	@media @large{
+		top: 25px;
+		right: 25px;
+		left: auto;
+		width: 50px;
+		height: auto;
+		background-color: transparent;
+	}
+
+	.ctrl{
+		width: 20%;
+		height: 100%;
+		position: relative;
+		float: left;
+		display: block;
+		color: @color-copy-contrast;
+		cursor: pointer;
+
+		@media @large{
+			width: 100%;
+			height: 50px;
+		}
+
+		span{
+			position: absolute;
+			height: 40px;
+			width: 40px;
+			top: 50%;
+			left: 50%;
+			margin: -20px 0 0 -20px;
+			font-size: 40px;
+			line-height: 40px;
+		}
+	}
+
+	.menu {
+		background-color: transparent;
+
+		.transition &{
+			.transition(all .5s ease);
+		}
+
+		@media @large{
+			display: none;
+		}
+
+		.list &{ 
+			background-color: @color-background; 
+			color: @color-copy;
+		}
+
+		span{ .gfx(menu);  }
+
+	}
+	.full {
+		color: @color-copy-contrast;
+
+		span{ .gfx(open);  }
+	}
+	.prev span{ .gfx(up);    }
+	.next span{ .gfx(down);  }
+	.save span{ .gfx(mail);  }
+}

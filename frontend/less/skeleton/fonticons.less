@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "fonticons";
+  src: url('../../assets/fonts/fonticons.eot');
+  src: url('../../assets/fonts/fonticons.eot?#iefix') format('eot'),
+    url('../../assets/fonts/fonticons.woff') format('woff'),
+    url('../../assets/fonts/fonticons.ttf') format('truetype'),
+    url('../../assets/fonts/fonticons.svg#fonticons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-styling(){
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-family: "fonticons";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  speak: none;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  vertical-align: top;
+  line-height: inherit;
+}
+
+[class^="gfx-"], [class*=" gfx-"]{
+  &:before, &.after:after{
+    .font-styling();
+  }
+  &:before{margin-right: 0.5em;}
+  &.after {
+    &:before{display: none;}
+    &:after {margin-left: 0.5em;}
+  }
+}
+
+.gfx(@class, @element: before){
+  & when(@element = before){
+    &:before{
+      .glyphmap();
+    }
+  }
+  
+  & when(@element = after){
+    &:after{
+      .glyphmap();
+    }
+  }
+
+  .glyphmap(){
+    .font-styling();
+    & when (@class = menu){ content: "\E001" }
+    & when (@class = open){ content: "\E002" }
+    & when (@class = up){ content: "\E003" }
+    & when (@class = down){ content: "\E004" }
+    & when (@class = mail){ content: "\E005" }
+    & when (@class = next){ content: "\E006" }
+    & when (@class = delete){ content: "\E007" }
+    & when (@class = open-filled){ content: "\E008" }
+    & when (@class = grab){ content: "\E009" }
+    & when (@class = check){ content: "\E00A" }
+    & when (@class = arrow-right){ content: "\E00B" }
+    & when (@class = ornament_1){ content: "\E00C" }
+    & when (@class = logo){ content: "\E00D" }
+    & when (@class = box_1){ content: "\E00E" }
+    & when (@class = box_2){ content: "\E00F" }
+    & when (@class = box_3){ content: "\E010" }
+    & when (@class = logotype){ content: "\E011" }
+    & when (@class = expand){ content: "\E012" }
+    
+  }
+}
+
+.gfx-menu:before { content: "\E001" }
+.gfx-open:before { content: "\E002" }
+.gfx-up:before { content: "\E003" }
+.gfx-down:before { content: "\E004" }
+.gfx-mail:before { content: "\E005" }
+.gfx-next:before { content: "\E006" }
+.gfx-delete:before { content: "\E007" }
+.gfx-open-filled:before { content: "\E008" }
+.gfx-grab:before { content: "\E009" }
+.gfx-check:before { content: "\E00A" }
+.gfx-arrow-right:before { content: "\E00B" }
+.gfx-ornament_1:before { content: "\E00C" }
+.gfx-logo:before { content: "\E00D" }
+.gfx-box_1:before { content: "\E00E" }
+.gfx-box_2:before { content: "\E00F" }
+.gfx-box_3:before { content: "\E010" }
+.gfx-logotype:before { content: "\E011" }
+.gfx-expand:before { content: "\E012" }
+
+
+.after.gfx-menu:after { content: "\E001" }
+.after.gfx-open:after { content: "\E002" }
+.after.gfx-up:after { content: "\E003" }
+.after.gfx-down:after { content: "\E004" }
+.after.gfx-mail:after { content: "\E005" }
+.after.gfx-next:after { content: "\E006" }
+.after.gfx-delete:after { content: "\E007" }
+.after.gfx-open-filled:after { content: "\E008" }
+.after.gfx-grab:after { content: "\E009" }
+.after.gfx-check:after { content: "\E00A" }
+.after.gfx-arrow-right:after { content: "\E00B" }
+.after.gfx-ornament_1:after { content: "\E00C" }
+.after.gfx-logo:after { content: "\E00D" }
+.after.gfx-box_1:after { content: "\E00E" }
+.after.gfx-box_2:after { content: "\E00F" }
+.after.gfx-box_3:after { content: "\E010" }
+.after.gfx-logotype:after { content: "\E011" }
+.after.gfx-expand:after { content: "\E012" }

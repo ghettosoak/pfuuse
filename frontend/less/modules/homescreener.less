@@ -1,0 +1,70 @@
+.homescreener{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	visibility: hidden;
+	opacity: 0;
+	.transform(translateY(100%));
+
+	.transition &{
+		.transition(all .5s ease);
+	}
+
+	.homescreening &{
+		.transform(translateY(0));	
+		visibility: visible;
+		opacity: 1;	
+	}
+
+	.homescreener_slide{
+		position: absolute;
+		// height: ~'calc(100% - 50px)';
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top: 0;
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+		padding: 20px;
+		line-height: 25px;
+		background-color: rgba(0,0,0,.9);
+		color: white;
+		font-family: @ui_regular;
+		.transform(translateY(-100%));
+
+		.transition &{
+			.transition(all .5s ease);
+		}
+
+		.homescreening &{
+			.transform(translateY(0));		
+		}
+
+		img{
+			width: 100%;
+			display: block;
+		}
+
+		*:last-child{
+			margin-bottom: 100px;
+		}
+	}
+
+	.homescreener_close{
+		position: absolute;
+		bottom: 0;
+		height: 50px;
+		width: 100%;
+		background-color: @color-background;
+		text-align: center;
+		line-height: 50px;
+		cursor: pointer;
+
+		&:before{
+			margin: 0;
+		}
+	}
+}

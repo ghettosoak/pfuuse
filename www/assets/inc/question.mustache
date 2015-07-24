@@ -1,0 +1,56 @@
+<div class="article a_{{number}} saved_{{saved}} origin_{{origin}}" data-number="">
+	{{# article}}
+
+		{{# question}}
+
+		<h1 class="title">
+			<div class="interior">
+				{{title}}
+				<a href="{{url}}" target="_blank" class="gfx-open-filled"></a>
+			</div>
+		</h1>
+
+		<div class="expander content question">
+			<div class="interior">
+				<div class="truncated">
+					{{truncator text}}...
+				</div>
+				<div class="expanded">
+					{{{text}}}
+
+					{{# comments}}
+					<div class="comment">
+						{{{.}}}
+					</div>
+					{{/ comments}}
+				</div>
+			</div>
+		</div>
+
+		{{/ question}}
+
+		{{# answers}}
+		<div class="expander content answer">
+			<div class="interior">
+				<div class="truncated">
+					{{truncator text}}..
+				</div>
+				<div class="expanded">
+					{{{text}}}
+
+					{{# comments}}
+					<div class="comment">
+						{{{.}}}
+					</div>
+					{{/ comments}}
+				</div>
+			</div>
+		</div>
+		{{/ answers}}
+		
+		<span class="published">accessed on: {{queried}}</span>
+
+		<span class="flourish gfx-ornament_1"></span>
+
+	{{/ article}}
+</div>

@@ -1,0 +1,55 @@
+.viewer_list_progress{
+	position: absolute;
+	top: 25px;
+	left: 5px;
+	height: ~'calc(100% - 75px)';
+	width: 7px;
+	z-index: 2;
+	overflow: hidden;
+
+	.transition &{
+		.transition(all .5s @eio);
+	}
+
+	@media @large{
+		left: 90px;
+		height: ~'calc(100% - 25px)';
+	}
+
+	.list &{
+		left: ~'calc(100% - 10px)';
+		top: 0;
+		height: ~'calc(100% - 51px)';
+
+		@media @large{
+			left: @list_width_desktop - 10px;
+			top: 25px;
+			height: ~'calc(100% - 25px)';
+		}
+	}
+
+	span{
+		display: block;
+		position: absolute;
+		height: 7px;
+		width: 7px;
+		border-radius: 7px;
+		border: 1px @color-indicate solid;
+
+		.transition &{
+			.transition(all .5s @eio);
+		}
+
+		&:before, &:after{
+			content:'';
+			width: 1px;
+			height: 1000px;
+			left: 2px;
+			position: absolute;
+			background-color: @color-indicate;
+		}
+
+		&:before{ bottom: 10px; }
+		&:after{ top: 10px; }
+	}
+}

@@ -1,0 +1,22 @@
+{
+  "name": "pfuuse",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ghettosoak/pfuuse"
+  },
+  "description": "Project setup",
+  "devDependencies": {
+    "body-parser": "^1.13.2",
+    "browserify-handlebars": "^1.0.0",
+    "cheerio": "^0.19.0",
+    "cors": "^2.7.1",
+    "express": "^4.13.1",
+    "handlebars": "^3.0.3",
+    "hbsfy": "^2.2.1",
+    "jquery": "^1.7.4",
+    "jquery-ui": "^1.10.5",
+    "nodemailer": "^1.4.0",
+    "request": "^2.60.0"
+  }
+}

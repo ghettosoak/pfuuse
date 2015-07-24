@@ -1,0 +1,32 @@
+[
+	{
+		"title": "This is search result #1",
+		"url_raw":"http://this-is-a-link-to-search-result-1.com",
+		"url_readable":"/something-pertinent-to-the-search-1",
+		"sample": "this is a bit of preview text, taken from the page in question. it is for result #1. it will trail off like this..."
+	},
+	{
+		"title": "This is search result #2",
+		"url_raw":"http://this-is-a-link-to-search-result-2.com",
+		"url_readable":"/something-pertinent-to-the-search-2",
+		"sample": "this is a bit of preview text, taken from the page in question. it is for result #2. it will trail off like this..."
+	},
+	{
+		"title": "This is search result #3",
+		"url_raw":"http://this-is-a-link-to-search-result-3.com",
+		"url_readable":"/something-pertinent-to-the-search-3",
+		"sample": "this is a bit of preview text, taken from the page in question. it is for result #3. it will trail off like this..."
+	},
+	{
+		"title": "This is search result #4",
+		"url_raw":"http://this-is-a-link-to-search-result-4.com",
+		"url_readable":"/something-pertinent-to-the-search-4",
+		"sample": "this is a bit of preview text, taken from the page in question. it is for result #4. it will trail off like this..."
+	},
+	{
+		"title": "This is search result #5",
+		"url_raw":"http://this-is-a-link-to-search-result-5.com",
+		"url_readable":"/something-pertinent-to-the-search-5",
+		"sample": "this is a bit of preview text, taken from the page in question. it is for result #5. it will trail off like this..."
+	}
+]

@@ -1,0 +1,107 @@
+.about{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	visibility: hidden;
+	opacity: 0;
+	.transform(translateY(100%));
+
+	.transition &{
+		.transition(all .5s ease);
+	}
+
+	.what &{
+		.transform(translateY(0));	
+		visibility: visible;
+		opacity: 1;	
+	}
+
+	.about_slide{
+		position: absolute;
+		// height: ~'calc(100% - 50px)';
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top: 0;
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+		padding: 20px;
+		line-height: 25px;
+		background-image: url(../img/stars.jpg);
+		background-size: cover;
+		background-position: center center;
+		color: white;
+		font-family: @ui_regular;
+		.transform(translateY(-100%));
+
+		.transition &{
+			.transition(all .5s ease);
+		}		
+
+		.what &{
+			.transform(translateY(0));		
+		}
+
+		.logo{
+			width: 100%;
+			height: 200px;
+			line-height: 200px;
+			display: block;
+			font-size: 200px;
+			text-align: center;
+
+			&:before{
+				margin: 0;
+			}
+		}
+
+		b{
+			font-family: @headline_bold;
+		}
+
+		a{
+			color: white;
+			border-bottom: 1px dotted @color-copy-contrast;
+
+			&:hover{
+				text-decoration: none;
+			}
+		}
+
+		*:last-child{
+			margin-bottom: 100px;
+		}
+
+	}
+
+	.about_close{
+		position: absolute;
+		bottom: 0;
+		height: 50px;
+		width: 100%;
+		background-color: @color-background;
+		text-align: center;
+		line-height: 50px;
+		font-size: 40px;
+		cursor: pointer;
+
+		&:before{
+			margin: 0;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

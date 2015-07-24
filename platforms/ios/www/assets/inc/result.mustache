@@ -1,0 +1,33 @@
+<div class="hn_results result_exterior" data-origin="hn">
+	<div class="interior">
+		<h1>Hacker News</h1>
+		{{# HN}}
+		<div class="result result_hn" data-url="{{url}}" data-order="" target="_blank">
+			{{title}}
+		</div>
+		{{/ HN}}
+	</div>
+</div>
+
+<div class="dn_results result_exterior" data-origin="dn">
+	<div class="interior">		
+		<h1>Designer News</h1>
+		{{# DN}}
+		<div class="result result_dn" data-url="{{url}}" data-order="" target="_blank">
+			{{title}}
+		</div>
+		{{/ DN}}
+	</div>
+</div>
+
+<div class="so_results result_exterior" data-origin="so">
+	<div class="interior">
+		<h1>Stack Overflow</h1>
+		{{# SO}}
+		<div class="result result_so" data-url="{{url}}" data-order="" target="_blank">
+			<b>{{id}}</b>
+			{{title}}
+		</div>
+		{{/ SO}}
+	</div>
+</div>

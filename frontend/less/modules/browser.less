@@ -1,0 +1,85 @@
+.browser{
+	left: 33.333333%;
+	overflow: hidden;
+	// overflow-x: hidden;
+	// overflow-y: scroll;
+	// -webkit-overflow-scrolling: touch;
+	// height: ~'calc(100% + 1px)';
+
+	.browser_interior{
+		position: absolute;
+		width: 100%;
+		// height: 100%;
+		top: 0;
+		left: 0;		
+		color: white;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		// overflow: scroll;
+		-webkit-overflow-scrolling: touch;
+		// .gpuHack;
+
+		.standard &{
+			height: ~'calc(100% - 50px)';
+		}
+
+		@media @large{
+			height: ~'calc(100% - 100px)';
+		}
+
+		h1{
+			font-family: @ui_bold;
+			padding: 100px 10px 20px;
+			margin: 0;
+			border-bottom: 5px white solid;
+
+			@media @large{
+				padding-top: 150px;
+			}
+		}
+
+		.result_exterior{
+			padding: 10px;
+			position: relative;
+			float: left;
+			width: 100%;
+
+			.interior{
+				overflow: hidden;
+			}
+		}
+
+		.hn_results{
+			background-color: @color-root-HN;
+		}
+		.dn_results{
+			background-color: @color-root-DN;
+		}
+		.so_results{
+			background-color: @color-root-SO;
+		}
+	}
+
+	.gather{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		font-family: @ui_bold;
+		cursor: pointer;
+
+		@media @large{
+			height: 100px;
+			line-height: 100px;
+		}
+
+		span{
+			display: block;
+			background-color: @color-background-dark;
+			color: @color-copy-contrast;
+		}
+	}
+}

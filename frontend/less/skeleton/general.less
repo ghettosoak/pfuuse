@@ -1,0 +1,29 @@
+// this is a test to see if we have media queries
+// read more at: http://stackoverflow.com/a/13665729/825728
+@media all and (min-width:1px) { #mediatest { position:absolute } }
+
+#img_stage{
+	position: fixed;
+	height: 1px;
+	width: 1px;
+	top: -1px;
+	right: -100%;
+	overflow: hidden;
+}
+
+// Headings
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6{
+
+}
+
+h1, .h1 { font-size: @base-font-size * 2; }
+h2, .h2 { font-size: @base-font-size * 1.8; }
+h3, .h3 { font-size: @base-font-size * 1.6; }
+h4, .h4 { font-size: @base-font-size * 1.4; }
+h5, .h5 { font-size: @base-font-size * 1.2; }
+h6, .h6 { font-size: @base-font-size * 1; }

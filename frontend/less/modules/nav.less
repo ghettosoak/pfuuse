@@ -1,0 +1,164 @@
+.nav{
+	position: relative;
+	user-select: none;
+	z-index: 5;
+	width: 100%;
+	left: 0;
+	padding-left: 50px;
+	border-bottom: 1px @color-light solid;
+	font-family: @headline_regular;
+	background-color: @color-background;
+
+	.transition &{
+		@resultTransition: ~'background-color .25s ease, color .25s ease';
+		.transition(@resultTransition);
+	}
+
+	.viewer_list_clone &{
+		position: absolute;
+		z-index: 1;
+	}
+
+	b{
+		font-family: @headline_bold;
+		display: block;
+	}
+}
+
+.ui-sortable-helper {
+	transition: none !important;
+	animation: pulse 0.4s alternate infinite;
+}
+
+.nav-placeholder {
+	height: 60px;
+	width: 5px;
+	border-left: 2px solid #4999DA; 
+	margin: 0 0 0.75rem 0;
+	position: relative;
+	z-index: 6;
+}
+
+.slide{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	color: @color-copy-contrast;
+	background-color: @color-background-dark;
+	z-index: 1;
+	padding: 0 10px 0 50px;
+
+	.transition &{
+		.transition(left .5s ease);
+	}
+
+	&.open{
+		left: -150px !important;
+	}
+
+	.transition &.ui-draggable-dragging{
+		.transition(~'left 0s !important');
+	}
+
+	p{
+		padding: 20px 0;
+		margin: 0;
+	}
+
+	.selected &{
+		background-color: @color-copy;
+		color: @color-copy-contrast;
+	}
+
+	.grab{
+		position: absolute;
+		height: 30px;
+		width: 30px;
+		top: 50%;
+		margin-top: -15px;
+		left: 8px;
+		border-radius: 50px;
+		font-size: 30px;
+		line-height: 30px;
+		.gfx(grab);
+
+		.read &{
+			.gfx(check);
+		}
+
+		.active &{
+			.gfx(arrow-right);
+		}
+	}
+}
+
+.slide_shadow{
+	visibility: hidden;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	padding: 20px 10px 20px 0;
+}
+
+.nav_ctrl{
+	height: 100%;
+	width: 150px;
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	& > div{
+		position: relative;
+		float: left;
+		height: 100%;
+		width: 50px;
+		color: @color-copy;
+		font-size: 40px;
+		line-height: 40px;
+
+		&:before{
+			content:'';
+			position: absolute;
+			height: 40px;
+			width: 40px;
+			top: 50%;
+			left: 5px;
+			margin-top: -20px;
+		}
+	}
+
+	.nav_ctrl_delete{
+		.gfx(delete);
+	}
+
+	.nav_ctrl_save{
+		.gfx(mail);
+
+		.saved &{
+			color: @color-disabled;
+		}
+	}
+	.nav_ctrl_read{
+		.gfx(next);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

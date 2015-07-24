@@ -1,0 +1,123 @@
+READR
+
+++ DEV
+//top header
+	//name changes with story
+	//progress through story?
+	//click to return to top of article
+
+//load next story
+
+//iframe
+
+//prev
+//next
+
+//side menu
+	//reorder
+	//slide to delete
+	//slide to send
+	//tap on background, return to reading
+	//show read articles
+	//progress through articles as scrolling
+		//activestate
+
+//delete from list
+	//animate?
+
+//tap to jump to article
+	//put in front of current?
+
+//send to email later
+	//order into lists? 'check this out', 'not-mobile-friendly'
+	//article added to list confirmation
+		//persistent awarenesss @ buttons
+	//sent stories appear as greyed out on list
+		//echoed in title
+	//mail sent confirmation
+		//seperate none-modal element, along top
+
+stack overflow 'article' node script?
+
+
+++ DESIGN
+//icons
+	//icons in main navbar
+	//nav delete && mail
+	//link in header
+
+//delicious colour scheme?
+	//off white ground?
+	//darkish green / blue copy?
+	//coloured headlines?
+		//w/ confirmation of saved in headline
+
+//typography
+	//ui face vs reading face? :D
+
+elements
+	//top bar
+
+	//headers
+		//full colour bg :D
+		//origin?
+			//site?
+			//HN / DN?
+		//link / icon in main header
+		//send confirm message
+	//copy
+	//links
+	//bold
+	//pullquote
+	//lists
+	//images
+
+	//date?
+
+	//nav list
+		//read
+		//active
+		//sildeout
+		//saved @ slideout button
+		//grabber
+			//coarse bg? :)
+
+//progress indicator
+
+//browser screen
+
+//'gather' button
+
+//save 'screen'
+	//buttons
+	//'has been saved' state
+
+//finished
+	//with things to send
+	//without things to send
+
+//night / day mode
+
+
+//loading screen
+
+//splash screen
+//about
+//colophon
+
+//desktop variant! :D
+	//icons at right
+	//menu @ left bar
+
+//needs a new name!
+	//pfuuse
+
+
+
+WOULDN'T IT BE NICE
+	only one progressbar perhaps only on the side?
+	//hijack click in article to open in new tab
+
+	set up gmail account to send mail?
+
+

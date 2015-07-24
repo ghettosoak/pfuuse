@@ -1,0 +1,68 @@
+.viewer_save_select{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0;
+	z-index: 10;
+	background-color: rgba(0, 0, 0, .75);
+	display: table;
+	visibility: hidden;
+	opacity: 0;
+	.transform(scale(1.5));
+
+	.transition &{
+		.transition(all .5s @eio);
+	}
+
+	.save &{
+		visibility: visible;
+		opacity: 1;
+		.transform(scale(1));
+	}
+
+	.viewer_save_select_exterior{
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.viewer_save_select_interior{
+		position: relative;
+		width: 80%;
+		margin: auto;
+		padding: 20px;
+		overflow: hidden;
+
+		@media @large{
+			width: @button_width;
+		}
+
+		div{
+			width: 100%;
+			position: relative;
+			float: left;
+			padding: 15px 10px;
+			text-align: center;
+			cursor: pointer;
+			background-color: @color-background;
+
+			
+		}
+
+		.viewer_save_select_option{
+			margin-top: 1px;
+			&:before{
+				content: attr(data-option);
+			}
+
+			&:first-of-type{
+				margin: 0;
+			}
+		}
+
+		.viewer_save_select_command{
+			margin-top: 10px;
+			font-family: @ui_bold;
+		}
+	}
+}
