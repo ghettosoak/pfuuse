@@ -1,4 +1,8 @@
 'use strict';
+if (typeof fetch !== 'function') {
+  console.error(`Pfuuse needs Node 18 or newer (this is ${process.version}). Try: nvm install 20 && nvm use 20`);
+  process.exit(1);
+}
 // Nightly digest runner. Usage: node backend/digest [--dry-run]
 // Env: DIGEST_HN (8), DIGEST_SE (5), DIGEST_EXCERPT_LEN (280).
 

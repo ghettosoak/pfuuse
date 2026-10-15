@@ -51,7 +51,7 @@ window.readr = {
 	saveList: {},
 };
 
-window.apiTarget = window.location.hostname === 'localhost' ? 'http://127.0.0.1:5000' : 'http://read.ject.ch';
+window.apiTarget = ''; // same origin: the Express server serves this app and the API
 
 // init some things
 $(function($){

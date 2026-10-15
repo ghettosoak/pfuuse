@@ -1,5 +1,10 @@
 'use strict';
+if (typeof fetch !== 'function') {
+  console.error(`Pfuuse needs Node 18 or newer (this is ${process.version}). Try: nvm install 20 && nvm use 20`);
+  process.exit(1);
+}
 require('dotenv').config({ quiet: true });
+const path = require('node:path');
 const express = require('express');
 const cors = require('cors');
 const List = require('./list');
@@ -11,7 +16,7 @@ const app = express();
 app.use(cors());
 app.use(express.json({ limit: '256kb' }));
 app.use(express.urlencoded({ extended: true, limit: '256kb' }));
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, '..', 'www')));
 
 const wrap = (fn) => (req, res) => Promise.resolve(fn(req, res)).catch((err) => {
   console.error(`${req.method} ${req.path} failed:`, err.message);
@@ -43,7 +48,7 @@ app.use((err, req, res, next) => { // body-parse errors etc.
   res.status(err.status || 500).json({ error: err.message });
 });
 
-function start(port = process.env.PORT || 5000) {
+function start(port = process.env.PORT || 5050) {
   const server = app.listen(port, '127.0.0.1', () => {
     console.log('Hello from http://%s:%s', server.address().address, server.address().port);
   });
